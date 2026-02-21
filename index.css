@@ -1,0 +1,674 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+#text-logo{
+    color: blue;
+}
+.about-text>a{
+     text-decoration: none;
+     margin-left: 20px;
+     color:black;
+}
+.about-text > a:first-child {
+    color: blue;
+}
+ 
+
+.header-image{
+    position: relative;
+    background-image: url('mission-restart-a6/Assets/banner-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+
+    display: flex;
+    align-items: center;   
+    padding-left: 80px;   
+}
+
+
+.header-image::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.header-txt{
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 500px;
+    margin-left: 150px;
+}
+
+.header-txt h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header-txt h4{
+    font-weight: 400;
+    margin-bottom: 20px
+}
+
+.header-txt button{
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* ========================= */
+/* 📱 Tablet Responsive */
+/* ========================= */
+@media (max-width: 992px) {
+
+  .navbar-container{
+    justify-content: space-between;
+    padding: 15px 40px;
+  }
+
+  .header-image{
+    padding-left: 40px;
+    height: 60vh;
+  }
+
+  .header-txt{
+    margin-left: 0;
+    max-width: 450px;
+  }
+
+  .header-txt h2{
+    font-size: 32px;
+  }
+
+}
+
+/* ========================= */
+/* 📱 Mobile Responsive */
+/* ========================= */
+@media (max-width: 600px) {
+
+  /* Navbar */
+  .navbar-container{
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .about-text{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-text>a{
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  /* Header Section */
+  .header-image{
+    height: 80vh;
+    padding: 0 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-txt{
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .header-txt h2{
+    font-size: 26px;
+  }
+
+  .header-txt h4{
+    font-size: 14px;
+  }
+
+  .header-txt button{
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+/* Section */
+.why-us-section{
+    padding: 80px 80px;
+    background: #f3f4f6;
+}
+
+/* Heading */
+.why-us{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.why-us h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.why-us p{
+    color: #6b7280;
+}
+
+/* Features Layout */
+.features-section{
+    display: flex;
+    gap: 20px;
+}
+
+/* Feature Card */
+.feature-box{
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.feature-box:hover{
+  transform: translateY(-5px);
+}
+
+/* Icon */
+.icon-box{
+  width: 50px;
+  height: 50px;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.icon-box i{
+  color: #6366f1;
+  font-size: 20px;
+}
+
+.feature-box h3{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.feature-box p{
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* 📱 Tablet Responsive */
+/* ========================= */
+@media (max-width: 992px) {
+  .why-us-section{
+      padding: 60px 40px;
+  }
+
+  .features-section{
+      flex-wrap: wrap;
+  }
+
+  .feature-box{
+      flex: 0 0 48%;
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile Responsive */
+/* ========================= */
+@media (max-width: 600px) {
+
+  .why-us-section{
+      padding: 50px 20px;
+  }
+
+  .why-us h2{
+      font-size: 26px;
+  }
+
+  .features-section{
+      flex-direction: column;
+  }
+
+  .feature-box{
+      flex: 0 0 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.section {
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+.card {
+  background-color: #f3f4f6;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.category {
+  font-size: 12px;
+  color: #2563eb;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.rating {
+  color: #facc15;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.rating span {
+  color: #374151;
+  margin-left: 5px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-outline {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+}
+
+.btn-outline:hover {
+  background-color: #e5e7eb;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Footer Base ===== */
+.footer {
+  background: #060b18;
+  color: #cbd5e1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px 20px;
+}
+
+/* ===== Grid ===== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.6fr;
+  gap: 40px;
+}
+
+.footer-col h2 {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.footer-col h3 {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+/* ===== Newsletter ===== */
+.subscribe {
+  display: flex;
+  margin-top: 15px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+}
+
+.subscribe button {
+  padding: 12px 18px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe button:hover {
+  background: #4f46e5;
+}
+
+/* ===== Bottom ===== */
+.footer-bottom {
+  border-top: 1px solid #1f2937;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials a {
+  margin-left: 14px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.socials a:hover {
+  color: white;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .subscribe input,
+  .subscribe button {
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .subscribe button {
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .socials a {
+    margin: 0 8px;
+  }
+}
+
+/* ===== Footer Base ===== */
+.footer {
+  background: #060b18;
+  color: #cbd5e1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px 20px;
+}
+
+/* ===== Grid ===== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.6fr;
+  gap: 40px;
+}
+
+.footer-col h2 {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.footer-col h3 {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+/* ===== Newsletter ===== */
+.subscribe {
+  display: flex;
+  margin-top: 15px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+}
+
+.subscribe button {
+  padding: 12px 18px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe button:hover {
+  background: #4f46e5;
+}
+
+/* ===== Bottom ===== */
+.footer-bottom {
+  border-top: 1px solid #1f2937;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials a {
+  margin-left: 14px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.socials a:hover {
+  color: white;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .subscribe input,
+  .subscribe button {
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .subscribe button {
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .socials a {
+    margin: 0 8px;
+  }
+}
