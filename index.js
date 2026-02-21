@@ -38,4 +38,51 @@ const displayData = (data) => {
   });
 }
 
+const loadCategories = () => {
+  fetch('https://fakestoreapi.com/products/categories')
+    .then(res => res.json())
+    .then(data => displayCategories(data))
+}
+
+const displayCategories = (categories) => {
+
+  const container = document.getElementById("category-container");
+
+  const allBtn = document.createElement("button");
+  allBtn.innerText = "All";
+  allBtn.className = "category-btn active";
+  allBtn.onclick = () => {
+    setActive(allBtn);
+    loadData();
+  };
+  container.appendChild(allBtn);
+
+  categories.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.innerText = cat;
+    btn.className = "category-btn";
+
+    btn.onclick = () => {
+      setActive(btn);
+      loadCategoryProducts(cat);
+    };
+
+    container.appendChild(btn);
+  });
+}
+
+const loadCategoryProducts = (category) => {
+  fetch(`https://fakestoreapi.com/products/category/${category}`)
+    .then(res => res.json())
+    .then(data => displayData(data))
+}
+
+const setActive = (clickedBtn) => {
+  document.querySelectorAll(".category-btn").forEach(btn =>
+    btn.classList.remove("active")
+  );
+  clickedBtn.classList.add("active");
+}
+
+loadCategories();
 loadData();

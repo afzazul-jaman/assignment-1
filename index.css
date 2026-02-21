@@ -1,13 +1,21 @@
 body{
     margin: 0;
     padding: 0;
+     
+}
+html{
+  scroll-behavior: smooth;
+}
+
+section{
+  scroll-margin-top: 90px;
 }
 
 .navbar-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-   
+    padding:20px;
 }
 #text-logo{
     color: blue;
@@ -69,9 +77,8 @@ body{
     border-radius: 6px;
     cursor: pointer;
 }
-/* ========================= */
-/* 📱 Tablet Responsive */
-/* ========================= */
+
+/*  Tablet Responsive */
 @media (max-width: 992px) {
 
   .navbar-container{
@@ -95,9 +102,9 @@ body{
 
 }
 
-/* ========================= */
-/* 📱 Mobile Responsive */
-/* ========================= */
+
+/* Mobile Responsive */
+
 @media (max-width: 600px) {
 
   /* Navbar */
@@ -156,7 +163,47 @@ body{
     text-align: center;
     margin-bottom: 50px;
 }
+#category-container{
+display: flex;
+   justify-content: center;
+}
+.heading{
+   text-align: center;
+}
+/*  Category Filter  */
+.category-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px;
+}
 
+.category-btn{
+  padding:10px 18px;
+  border-radius:25px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  cursor:pointer;
+  transition:.25s;
+  font-size:14px;
+}
+
+.category-btn:hover{
+  background:#2563eb;
+  color:#fff;
+}
+
+.category-btn.active{
+  background:#2563eb;
+  color:#fff;
+}
+
+/* mobile center */
+@media (max-width:600px){
+  .category-container{
+    justify-content:center;
+  }
+}
 .why-us h2{
     font-size: 32px;
     margin-bottom: 10px;
@@ -215,9 +262,9 @@ body{
   line-height: 1.6;
 }
 
-/* ========================= */
-/* 📱 Tablet Responsive */
-/* ========================= */
+
+/* Tablet Responsive */
+
 @media (max-width: 992px) {
   .why-us-section{
       padding: 60px 40px;
@@ -232,9 +279,8 @@ body{
   }
 }
 
-/* ========================= */
-/* 📱 Mobile Responsive */
-/* ========================= */
+
+/* Mobile Responsive */
 @media (max-width: 600px) {
 
   .why-us-section{
@@ -381,7 +427,7 @@ body {
   }
 }
 
-/* ===== Footer Base ===== */
+/*  Footer Base  */
 .footer {
   background: #060b18;
   color: #cbd5e1;
@@ -438,7 +484,7 @@ body {
   color: white;
 }
 
-/* ===== Newsletter ===== */
+/*  Newsletter  */
 .subscribe {
   display: flex;
   margin-top: 15px;
@@ -468,7 +514,7 @@ body {
   background: #4f46e5;
 }
 
-/* ===== Bottom ===== */
+/*  Bottom  */
 .footer-bottom {
   border-top: 1px solid #1f2937;
   margin-top: 40px;
@@ -489,14 +535,14 @@ body {
   color: white;
 }
 
-/* ===== Tablet ===== */
+/*  Tablet  */
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* ===== Mobile ===== */
+/*  Mobile  */
 @media (max-width: 550px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -527,7 +573,7 @@ body {
   }
 }
 
-/* ===== Footer Base ===== */
+/*  Footer Base  */
 .footer {
   background: #060b18;
   color: #cbd5e1;
@@ -540,7 +586,7 @@ body {
   padding: 60px 20px 20px;
 }
 
-/* ===== Grid ===== */
+/*  Grid  */
 .footer-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1.6fr;
@@ -584,7 +630,7 @@ body {
   color: white;
 }
 
-/* ===== Newsletter ===== */
+/*  Newsletter  */
 .subscribe {
   display: flex;
   margin-top: 15px;
@@ -614,7 +660,7 @@ body {
   background: #4f46e5;
 }
 
-/* ===== Bottom ===== */
+/*  Bottom  */
 .footer-bottom {
   border-top: 1px solid #1f2937;
   margin-top: 40px;
@@ -635,14 +681,14 @@ body {
   color: white;
 }
 
-/* ===== Tablet ===== */
+/*  Tablet  */
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* ===== Mobile ===== */
+/*  Mobile  */
 @media (max-width: 550px) {
   .footer-grid {
     grid-template-columns: 1fr;
